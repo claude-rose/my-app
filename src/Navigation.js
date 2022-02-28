@@ -8,7 +8,7 @@ export default function Navigation() {
 
   function searchInput(event) {
     event.preventDefault();
-    <Weather city={city} />;
+    setMessage(<Weather city={city} />);
   }
 
   function updateSearch(event) {
@@ -36,6 +36,7 @@ export default function Navigation() {
           </button>
         </div>
       </nav>
+      <div>{message}</div>
     </div>
   );
 }

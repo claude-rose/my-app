@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 export default function Weather(props) {
@@ -12,12 +11,11 @@ export default function Weather(props) {
   let [icon, setIcon] = useState(null);
 
   function handleResponse(response) {
-    let iconUrl = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
     setTemperature(Math.round(response.data.main.temp));
     setDescription(response.data.weather[0].description);
     setHumidity(response.data.main.humidity);
     setWind(response.data.wind.speed);
-    setIcon(iconUrl);
+    setIcon(response.data.weather[0].icon);
   }
 
   let apiKey = `677a0d74bb153df8022c5d432026b13a`;
@@ -27,7 +25,6 @@ export default function Weather(props) {
   return (
     <div className="Weather">
       <div className="card main-card">
-        <Navigation />
         <div className="card-body">
           <div className="row">
             <div className="col-3 border-end todays-temp">
@@ -52,7 +49,7 @@ export default function Weather(props) {
             </div>
             <div className="col-3">
               <img
-                src="{iconUrl}"
+                src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
                 alt="sunny"
                 width="100%"
                 className="weather-symbol"
