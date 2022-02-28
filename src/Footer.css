@@ -1,0 +1,12 @@
+footer {
+  padding: 10px 20px 0px;
+}
+
+.Footer .quote {
+  text-align: left;
+}
+
+.Footer .acknowledgement {
+  float: right;
+  text-decoration: none;
+}

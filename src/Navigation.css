@@ -1,0 +1,30 @@
+.Navigation .navigation {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  background: #dfeefd;
+}
+
+.Navigation .current-location-button {
+  display: block;
+  color: #00a6e4;
+  border-color: #00a6e4;
+  margin-left: 5px;
+}
+
+.Navigation .current-location-button:hover {
+  background: #00a6e4;
+  border-color: #00a6e4;
+  color: #fff;
+}
+
+.Navigation .search-button {
+  color: #016ed7;
+  border-color: #016ed7;
+}
+
+.Navigation .search-button:hover {
+  background: #016ed7;
+  border-color: #016ed7;
+  color: #fff;
+}
