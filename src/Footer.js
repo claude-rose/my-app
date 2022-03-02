@@ -8,7 +8,7 @@ export default function Footer() {
 
       <span className="acknowledgement">
         <a
-          href="https://github.com/claude-rose/Weather-App"
+          href="https://github.com/claude-rose/my-app"
           target="_blank"
           rel="noreferrer"
         >

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import Footer from "./Footer";
+import Navigation from "./Navigation";
 
 export default function Weather(props) {
   let [temperature, setTemperature] = useState(null);
@@ -24,6 +25,7 @@ export default function Weather(props) {
 
   return (
     <div className="Weather">
+      <Navigation />
       <div className="card main-card">
         <div className="card-body">
           <div className="row">
